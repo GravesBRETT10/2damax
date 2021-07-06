@@ -1,0 +1,221 @@
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 30px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+ /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+/* background */
+body {
+    background-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+     padding: 1px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+div.logo {
+    position: absolute;
+    top: 0px; 
+    right: 0px;
+    z-index: 10;
+
+}
+
+.col-12 img {
+    width:100%;
+    height: 400px;
+}
+/* responsive */
+@media screen and (max-width:680px) {
+    .col-12 img { height: auto; }
+}
+
+div.tekst {
+    padding: 20px;
+}
+
+
+a:link {
+    text-decoration: none;
+    color: #207f0b;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #207f0b;
+}
+
+a:hover { color: red;
+}
+
+a:active { color: blue;
+}
+
+
+
+/* Muziek tabs*/
+div.tab {
+    overflow: hidden;
+    background-color: #939496;
+    width: 200px;
+    height: 800px;
+}
+
+/* Style the links inside the tab */
+div.tab a {
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 12px;
+    text-decoration: none;
+    width: 200px;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+div.tab a:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab a:focus, .active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    top: 47px;
+    left: 200px;
+    position: absolute;
+    padding: 25px;
+}
+
+.tabcontent iframe {
+    width: 750px; 
+    height: 350px;
+}
+
+/* mobile phone responsive */
+@media screen and (max-width:680px) {
+    body {background-color: #6d6d6d;}
+    ul.topnav {background-color: #6d6d6d;}
+    div.logo {visibility: hidden;
+        }
+    a:link {
+    color: #f26b10;}
+    div.tab {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    padding: 10px;
+    }
+    div.tab a { 
+    width: 100%;
+    text-align: center;
+    }
+    .tabcontent {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    float: none;
+    }
+    .tabcontent iframe { 
+    width: 100%;
+    height: 200px;
+    
+   
+    }
+    
+    [class*="col-6 tekst"] {
+        width: 100%;
+
+}
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
